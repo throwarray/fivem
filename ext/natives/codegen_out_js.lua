@@ -94,6 +94,8 @@ print("const _in = Citizen.invokeNative;")
 print("const _ii = Citizen.pointerValueIntInitialized;")
 print("const _fi = Citizen.pointerValueFloatInitialized;")
 
+print("(function (window)")
+
 print("function _ch(hash) {")
 print("\tif (typeof hash === 'string') {")
 print("\t\treturn window.GetHashKey(hash);")
@@ -301,3 +303,5 @@ for _, v in pairs(_natives) do
 		print(printNative(v))
 	end
 end
+
+print("})(this || window);")

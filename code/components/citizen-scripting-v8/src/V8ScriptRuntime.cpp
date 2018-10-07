@@ -1338,7 +1338,7 @@ result_t V8ScriptRuntime::Create(IScriptHost* scriptHost)
 	}
 
 	// set the 'window' variable to the global itself
-	context->Global()->Set(String::NewFromUtf8(GetV8Isolate(), "window", NewStringType::kNormal).ToLocalChecked(), context->Global());
+	// context->Global()->Set(String::NewFromUtf8(GetV8Isolate(), "window", NewStringType::kNormal).ToLocalChecked(), context->Global());
 
 	std::string nativesBuild = "natives_universal.js";
 
